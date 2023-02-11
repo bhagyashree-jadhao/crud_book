@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block contain %}
+<div class=" container" align="center">
+    <div class="jumbotron">
+        <form action="" method="POST">
+           <h2>Add Book</h2>
+            {% csrf_token %}
+            <div class="container">
+                
+                <form class="was-validated">
+                    <div class="mb-3">
+                        
+                        <div class="col-md-3 mb-3">
+                            
+                        
+                            <label for="validationTextarea">Title</label>
+                            <input type="text" class="form-control" name="title" id="" value="{{book.title}}">
+                            
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationTextarea">Author_Name</label>
+                            <input type="text" class="form-control" name="author_name" id="" value="{{book.author_name}}">
+                            
+                        </div>
+                        
+                      <label for="validationTextarea">description:</label>
+                      <textarea class="form-control " name="description" id="" value="{{book.description}}"></textarea>
+                      <label >Date</label>
+                      <input type="date" name="published_date" id="" value="{{book.published_date}}"><br><br>
+                            
+                    </div>  
+            </div>
+
+            <input type="submit" class="btn btn-success">
+
+       </form>
+    </div>
+</div>
+
+
+{% endblock %}

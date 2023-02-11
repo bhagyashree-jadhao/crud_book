@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block contain %}
+<div class=" container" align="center">
+    
+        <form action="" method="POST">
+           <h2>Update Book</h2>
+            {% csrf_token %}
+            <div class="container">
+                <label><b style="color: brown;">Title</b></label><br>
+                <input type="text" name="title" id="" value="{{book.title}}"><br><br>
+                <label><b style="color: brown;">Author_Name</b></label><br>
+                <input type="text" name="author_name" id="" value="{{book.author_name}}"><br><br>
+                Description<br><input type="text" size="100" name="description" id="" value="{{book.description}}"><br><br>                <label><b style="color: brown;">Date</b></label><br>
+                <input type="date" name="published_date" id="" value="{{book.published_date}}"><br><br>
+            </div>
+
+            <input type="submit" class="btn btn-success" value="Update">
+
+       </form>
+    
+</div>
+
+
+{% endblock %}
+
+

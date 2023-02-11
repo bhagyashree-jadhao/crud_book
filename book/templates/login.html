@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block contain %}
+
+
+
+
+
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles --><!-- Login Form -->
+
+  <form  action='' method="POST">
+    {% csrf_token %}
+       UserName<br>
+              <input ype="text" id="login" class="fadeIn second" name="username" placeholder="username"><br>
+        EmailId<br><input type="text" id="login" class="fadeIn second" name="email" placeholder="email"><br>
+        Password<br><input type="password" id="password" class="fadeIn third" name="password" placeholder="password"><br>
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  </div>
+  </div>
+</div>	
+{% endblock %}
